@@ -1,0 +1,114 @@
+header {
+  box-shadow: 0 2px 11px rgba(221, 221, 221, 0.815);
+  padding: 7px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: var(--white);
+  .container-full {
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .left {
+    display: flex;
+    gap: 20px;
+    img {
+      width: 44px;
+    }
+    .search-box {
+      margin-top: 3px;
+      border: 1px solid var(--border-color);
+      height: 44px;
+      width: 270px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      gap: 5px;
+      background: var(--bg);
+      span {
+        display: inline-block;
+        margin-top: 6px;
+      }
+      input {
+        border: unset;
+        outline: unset;
+        background: unset;
+        width: 100%;
+      }
+    }
+  }
+
+  .center {
+    .center-menu {
+      display: flex;
+      gap: 30px;
+      height: 100%;
+      a {
+        width: 120px;
+        text-align: center;
+        display: block;
+        color: var(--gray);
+        position: relative;
+        transition: 0.4s;
+        padding: 10px;
+        border-radius: 6px;
+        &:hover {
+          background: var(--bg);
+        }
+      }
+      .active {
+        color: var(--primary);
+      &:hover{
+        background: transparent;
+      }
+        &::before {
+          content: "";
+          width: 100%;
+          height: 3px;
+          background: var(--primary);
+          position: absolute;
+          bottom: -7px;
+          border-radius: 50px;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  .right {
+    .right-menu {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      a {
+        width: 45px;
+        height: 45px;
+        line-height: 55px;
+        text-align: center;
+        background: var(--bg);
+        display: block;
+        border-radius: 50%;
+        color: var(--black);
+        transition: 0.4s;
+        &:hover {
+          background: #ddd;
+        }
+      }
+    }
+    li:last-child a,
+    li:last-child a:hover {
+      background: transparent;
+      border: 2px solid var(--primary);
+      box-sizing: border-box;
+    }
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+}
